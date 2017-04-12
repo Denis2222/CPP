@@ -1,18 +1,18 @@
-NAME	= scalar
-SRC		=	scalar.cpp
+NAME	= convert
+SRC		=	scalar.cpp main.cpp
 
 OBJ			= $(SRC:.cpp=.o)
-CC			= clang++ -Wall -Wextra -Werror
+	CC			= clang++ -Wall -Wextra -Werror
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+		$(CC) $(OBJ) -o $(NAME)
 
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+		rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+		rm -rf $(NAME)
 
 re: fclean $(NAME)
